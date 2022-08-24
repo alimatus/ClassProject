@@ -1,11 +1,13 @@
 class Ship {
     constructor(name, hull, firepower, accuracy) {
         this.name = name,
-        this.hull = hull || Math.floor(Math.random() * 6) + 3, 
-        this.firepower = firepower || Math.floor(Math.random() * 4) + 2,
-        this.accuracy = accuracy
+        this.hull = hull || Math.floor(Math.random() * 3) + 3, // function getRandomArbitrary(min, max) { Math.random() * (max - min) + min;
+        this.firepower = firepower || Math.floor(Math.random() * 2) + 2,
+        this.accuracy = accuracy || Math.floor(Math.random()* .2) + .6,
     }
-    
+    attack() {
+        
+    }
 }
 
 class MainShip extends Ship {
@@ -14,6 +16,15 @@ class MainShip extends Ship {
       // add additional properties for the "Main Ship"
     }
   }
+
+  class AlienShip extends Ship {
+    constructor(name, hull, firepower, accuracy) {
+      super(name, hull, firepower, accuracy);
+      // add additional properties for the "Main Ship"
+    }
+  }
+
+
 // class Example {
 // 	constructor(name){
 // 		this.name = name
